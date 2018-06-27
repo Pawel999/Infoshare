@@ -1,2 +1,3 @@
 # hello-world
 Code and stuff form course 
+Hi Everyone im Paul i lakie music and bushcraft bla bla etc etc....
