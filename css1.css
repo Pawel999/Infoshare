@@ -1,0 +1,8 @@
+.h1{
+background-color: blue;
+text-align: center;
+}
+textarea {
+  display: block;
+  margin-bottom: 10px;
+}
