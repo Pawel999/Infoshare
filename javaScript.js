@@ -1,4 +1,39 @@
+function getSecret(file, secretPassword) {
+  Secretfile.opened = Secretfile.opened + 1;
+  if (secretPassword == superSecretFile.password){
+      return superSecretFile.contents;
+  }
+  else{
+    return "Złe hasło! Nie masz dostępu do sekretów.";
+  }
+}
+function setSecret(file, secretPassword, secret) {
+    if(secretPassword == superSecretFile.password){
+      superSecretFile.opened = 0;
+      superSecretFile.contents = secret;
+    }
+}
+//////////
+var superSecretFile ={
+  level:"tajne",
+  opened: 0,
+  password:2,
+  contents:"Następne spotkanie z dr Zatanem odbędzie się w Katowicach"
+};
+/////////
+var secret = getSecret(??,??);
+console.log(secret);
 
+
+setSecret(??, ?? , "Następne spotkanie z dr Zatanem odbędzie się w Katowicach");
+secret = (getSecret( ?? , ?? ));
+console.log(secret);
+
+
+
+
+
+/*
 let orderCount = 0;
 
 const takeOrder = (topping, crustType) => {
