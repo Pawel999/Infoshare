@@ -1,35 +1,32 @@
 function getSecret(file, secretPassword) {
-  Secretfile.opened = Secretfile.opened + 1;
-  if (secretPassword == superSecretFile.password){
-      return superSecretFile.contents;
-  }
-  else{
-    return "Złe hasło! Nie masz dostępu do sekretów.";
-  }
-}
-function setSecret(file, secretPassword, secret) {
-    if(secretPassword == superSecretFile.password){
-      superSecretFile.opened = 0;
-      superSecretFile.contents = secret;
+    file.opened = file.opened + 1;
+    if (secretPassword == file.password){
+        return file.contents;
+    }
+    else {
+        return "Złe hasło! Nie masz dostępu do sekretów.";
     }
 }
-//////////
+function setSecret(file, secretPassword, secret) {
+    if( secretPassword == file.password){
+      file.opened = 0;
+      file.contents = secret;
+    }
+}
 var superSecretFile ={
   level:"tajne",
   opened: 0,
   password:2,
   contents:"Następne spotkanie z dr Zatanem odbędzie się w Katowicach"
 };
-/////////
-var secret = getSecret(??,??);
+
+var secret = getSecret(superSecretFile,2) ;
 console.log(secret);
 
 
-setSecret(??, ?? , "Następne spotkanie z dr Zatanem odbędzie się w Katowicach");
-secret = (getSecret( ?? , ?? ));
+setSecret(superSecretFile ,2 ,"Następne spotkanie z dr Zatanem odbędzie się w Zywcu");
+secret = (getSecret(  SuperSecretFile, 2 ));
 console.log(secret);
-
-
 
 
 
